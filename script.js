@@ -21,7 +21,6 @@
 	const text           = document.getElementsByClassName('text');
 	
 	function openCanvas(imagePackage) {
-		const imagePackage = imagePackage;
 		phone.classList.add('phone-onfade');
 		CanvasArea.start();
 		
