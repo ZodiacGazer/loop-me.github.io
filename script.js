@@ -22,9 +22,8 @@
 	
 	function openCanvas() {
 		const imagePackage = CanvasArea.getImgArray(PICS_LENGHT, IMAGE_PATH, PHONE);
-
-		CanvasArea.start();
 		phone.classList.add('phone-onfade');
+		CanvasArea.start();
 		CanvasArea.eventHandler(imagePackage);
 		CanvasArea.onFadingEvent();
 	}
@@ -95,7 +94,6 @@
 					phoneHighlight.style.display = "block";
 				}
 				ctx.drawImage(imgPackage[sliderTool.value], 0, 0);
-				console.log(sliderTool.value)
 			})
 		},
 		onFadingEvent(){
