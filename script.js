@@ -22,7 +22,6 @@
 	
 	function openCanvas() {
 		const imagePackage = CanvasArea.getImgArray(PICS_LENGHT, IMAGE_PATH, PHONE);
-		const dropsPackage = CanvasArea.getImgArray(DROPS_LENGHT, DROPS_PATH, DROPS);
 
 		CanvasArea.start();
 		phone.classList.add('phone-onfade');
