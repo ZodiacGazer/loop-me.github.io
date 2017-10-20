@@ -23,10 +23,12 @@
 	function openCanvas() {
 		const imagePackage = CanvasArea.getImgArray(PICS_LENGHT, IMAGE_PATH, PHONE);
 		phone.classList.add('phone-onfade');
-		CanvasArea.start();
-		
-		CanvasArea.eventHandler(imagePackage);
-		CanvasArea.onFadingEvent();
+		if (imagePackage[0].complete && imagePackage[PICS_LENGHT].completed) {
+			console.log('completed!!!')
+			CanvasArea.start();
+			CanvasArea.eventHandler(imagePackage);
+			CanvasArea.onFadingEvent();
+		}
 	}
 
 	function textChecker(textArr){
@@ -95,9 +97,7 @@
 					frame.style.opacity = 1;
 					phoneHighlight.style.display = "block";
 				}
-				if (imgPackage[sliderTool.value].complete) {
-					console.log('complete');
-				}
+
 				ctx.drawImage(imgPackage[sliderTool.value], 0, 0);
 			})
 		},
@@ -121,6 +121,9 @@
 				}
 			})
 		},
+		onComplete() {
+
+		}
 		clear() {
 			this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 		}
@@ -128,6 +131,7 @@
 	}
 
 	window.onload = function () {
+
 		openCanvas();
 	};
 
