@@ -58,15 +58,12 @@
 				let img = new Image();
 				img.src = PATH + item + x +'.png';
 				imagePackage.push(img);
-				console.log(imagePackage[x] + ' - loaded')
 			}
 			return imagePackage;
 		},
 		eventHandler(imgPackage){
 			const ctx = CanvasArea.context;
-			
 			ctx.drawImage(imgPackage[0], 0, 0);
-			
 			text[0].style.opacity = 1;
 			sliderTool.addEventListener('input', () => {
 				CanvasArea.clear();
