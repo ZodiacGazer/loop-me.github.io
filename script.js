@@ -96,7 +96,7 @@
 					phoneHighlight.style.display = "block";
 				}
 				if (imgPackage[sliderTool.value].complete) {
-					console.log(complete);
+					console.log('complete');
 				}
 				ctx.drawImage(imgPackage[sliderTool.value], 0, 0);
 			})
