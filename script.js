@@ -125,10 +125,10 @@
 		}
 
 	}
-	const imagePackage = CanvasArea.getImgArray(PICS_LENGHT, IMAGE_PATH, PHONE);
+	const picsPackage = CanvasArea.getImgArray(PICS_LENGHT, IMAGE_PATH, PHONE);
 	window.onload = function () {
 
-		openCanvas(imagePackage);
+		openCanvas(picsPackage);
 	};
 
 
