@@ -21,7 +21,6 @@
 	const text           = document.getElementsByClassName('text');
 	
 	function openCanvas() {
-		const imagePackage = CanvasArea.getImgArray(PICS_LENGHT, IMAGE_PATH, PHONE);
 		phone.classList.add('phone-onfade');
 		CanvasArea.start();
 		
@@ -96,6 +95,7 @@
 					phoneHighlight.style.display = "block";
 				}
 
+
 				ctx.drawImage(imgPackage[sliderTool.value], 0, 0);
 			})
 		},
@@ -124,7 +124,7 @@
 		}
 
 	}
-
+	const imagePackage = CanvasArea.getImgArray(PICS_LENGHT, IMAGE_PATH, PHONE);
 	window.onload = function () {
 
 		openCanvas();
