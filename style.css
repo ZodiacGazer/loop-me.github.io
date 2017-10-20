@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto', sans-serif; 
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+html,
+body,
+div {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 850px;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: minmax(100px, auto);
+	position: relative;
+}
+
+.brand {
+	align-self: center;
+	justify-self: start;
+}
+.model {
+	align-self: center;
+	justify-self: end;
+}
+
+.phone {
+	position: relative;
+	grid-column: 1 / 3;
+	justify-self: center;
+	align-self: center;
+	top: 100px;
+	opacity: 0;
+	transition: all .5s;
+}
+
+.phone-onfade {
+	top: 0;
+	opacity: 1;
+}
+
+.highlight {
+	position: absolute;
+	top: -10px;
+    left: -290px;
+}
+
+
+#canvas {
+    position: relative;
+}
+
+.frame {
+	position: absolute;
+    top: 12px;
+    left: 78px;
+    width: 362px;
+    height: 200px;
+    transition: all .1s;
+}
+
+.flash {
+    position: absolute;
+    top: -80px;
+    left: -50px;
+    /*animation-name: flash-click;*/
+    transform: scale(0);
+    animation-duration: .2s;
+    transition: all .5s;
+}
+
+@keyframes flash-click {
+	0% {
+
+		transform: rotate(0deg);
+	}
+	50% {
+
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: scale(2);
+		transform: rotate(0deg);
+	}
+}
+
+.tooltip {
+	justify-self: center;
+	width: 100px;
+    margin-top: 10px;
+}
+.slider {
+	align-self: center;
+}
+
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 220px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 220px;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: black;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  width: 220px;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: black;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 220px;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: black;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: black;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: black;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: black;
+}
+
+.card {
+	position: absolute;
+    top: -14px;
+    left: -290px;
+    display: none;
+    z-index: 999;
+}
+
+.card__effect {
+	position: absolute;
+	top: 139px;
+    left: 75px;
+    z-index: 998;
+    transition: all, .2s;
+    width: 10px;
+    height:45px;
+    visibility: hidden;
+}
+
+.card__animated {
+	visibility: visible;
+    top: 139px;
+    left: 126px;
+}
+
+
+.tooltip__text {
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.text__block,
+.buy {
+	grid-column: 1 / 3;
+}
+
+.text__block {
+	position: relative;
+}
+
+.text {
+	position: absolute;
+	font-size: 20px;
+	opacity: 0;
+	transition: all .5s;
+}
+
+.buy {
+	justify-self: end;
+}
+
+.buy__link {
+	text-transform: uppercase;
+	background: #333;
+	border-radius: 20px;
+    padding: 10px 24px;
+    color: #fff;
+}
+
+
+
+
