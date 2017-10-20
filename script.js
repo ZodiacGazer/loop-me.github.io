@@ -2,10 +2,8 @@
 (function(){
 	const PICS_LENGHT  = 59; // OPTIONAL
 	const DROPS_LENGHT = 3;
-	const IMAGE_PATH   = '../images/phone/' // PHONES
-	const DROPS_PATH   = '../images/' // DROPS
+	const IMAGE_PATH   = 'images/phone/' // PHONES
 	const PHONE        = 'phone_';
-	const DROPS        = 'raindrop_';
 
 	// DOM
 
