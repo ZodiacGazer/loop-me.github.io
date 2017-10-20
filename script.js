@@ -64,9 +64,9 @@
 		},
 		eventHandler(imgPackage){
 			const ctx = CanvasArea.context;
-			imgPackage[0].onload = () => {
-				ctx.drawImage(imgPackage[0], 0, 0);
-			}
+			
+			ctx.drawImage(imgPackage[0], 0, 0);
+			
 			text[0].style.opacity = 1;
 			sliderTool.addEventListener('input', () => {
 				CanvasArea.clear();
