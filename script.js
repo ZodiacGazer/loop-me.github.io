@@ -24,6 +24,7 @@
 		const imagePackage = CanvasArea.getImgArray(PICS_LENGHT, IMAGE_PATH, PHONE);
 		phone.classList.add('phone-onfade');
 		CanvasArea.start();
+		
 		CanvasArea.eventHandler(imagePackage);
 		CanvasArea.onFadingEvent();
 	}
@@ -57,6 +58,7 @@
 				let img = new Image();
 				img.src = PATH + item + x +'.png';
 				imagePackage.push(img);
+				console.log(imagePackage[x] + ' - loaded')
 			}
 			return imagePackage;
 		},
