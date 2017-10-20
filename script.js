@@ -20,7 +20,7 @@
 	const text4 	     = document.querySelector('.txt-4');
 	const text           = document.getElementsByClassName('text');
 	
-	function openCanvas() {
+	function openCanvas(imagePackage) {
 		phone.classList.add('phone-onfade');
 		CanvasArea.start();
 		
@@ -127,7 +127,7 @@
 	const imagePackage = CanvasArea.getImgArray(PICS_LENGHT, IMAGE_PATH, PHONE);
 	window.onload = function () {
 
-		openCanvas();
+		openCanvas(imagePackage);
 	};
 
 
