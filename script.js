@@ -23,7 +23,7 @@
 	function openCanvas() {
 		const imagePackage = CanvasArea.getImgArray(PICS_LENGHT, IMAGE_PATH, PHONE);
 		phone.classList.add('phone-onfade');
-		if (imagePackage[0].complete && imagePackage[PICS_LENGHT].complete) {
+		if (imagePackage[PICS_LENGHT].complete) {
 			console.log('completed!!!')
 			CanvasArea.start();
 			CanvasArea.eventHandler(imagePackage);
